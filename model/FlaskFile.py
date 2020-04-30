@@ -3,7 +3,7 @@ import numpy as np
 import sys
 import os
 import pickle
-import sklearn
+
 
 scalerfile = '/Users/apple/Documents/model/scaler.sav'
 scaler = pickle.load(open(scalerfile, 'rb'))
