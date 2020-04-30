@@ -4,16 +4,20 @@ import sys
 import os
 import pickle
 import sklearn
+
 scalerfile = '/Users/apple/Documents/model/scaler.sav'
 scaler = pickle.load(open(scalerfile, 'rb'))
 scalerfiley ='/Users/apple/Documents/model/scalery.sav'
 scalery = pickle.load(open(scalerfiley,'rb'))
 
 sys.path.append(os.path.abspath('./model'))
+
+
 from load import *
-app = Flask(__name__)
 global model, graph
 model,graph = init()
+
+app = Flask(__name__)
 
 def prepareGrades(grades):
     x =[5,5,3,2]
